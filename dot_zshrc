@@ -31,3 +31,6 @@ alias l="eza -lart modified --git-ignore"
 alias v="nvim"
 alias vim="nvim"
 alias tmux="tmux -u"
+
+# FNM
+eval "$(fnm env --use-on-cd)"

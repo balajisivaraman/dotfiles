@@ -1,6 +1,20 @@
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
+# Completions
+fpath+="/home/balaji/.nix-profile/share/zsh/site-functions"
+# Initialize auto completion and expansion.
+zstyle ':completion:*' completer _complete _prefix _files
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*:descriptions' format 'completing %d:'
+zstyle ':completion:*' group-name ''
+autoload -Uz compinit; compinit
+
+# History
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
+
 # Set up the prompt
 eval "$(starship init zsh)"
 

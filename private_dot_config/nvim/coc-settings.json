@@ -1,0 +1,34 @@
+{
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    },
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"]
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["css",  "markdown",  "scss", "html", "typescript", "go"],
+  "coc.preferences.colorSupport": true,
+  "explorer.width": 40,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.file.reveal.auto": true,
+  "explorer.file.showHiddenFiles": true,
+  "explorer.previewAction.onHover": false,
+  "rust-analyzer.server.path": "rust-analyzer",
+  "rust-analyzer.inlayHints.typeHints": false,
+  "rust-analyzer.inlayHints.chainingHints": false
+}

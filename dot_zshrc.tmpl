@@ -2,7 +2,11 @@
 bindkey -e
 
 # Completions
+{{- if ne .chezmoi.os "darwin" }}
 fpath+="/home/balaji/.nix-profile/share/zsh/site-functions"
+{{ else }}
+fpath+="/Users/balaji/.nix-profile/share/zsh/site-functions"
+{{ end -}}
 # Initialize auto completion and expansion.
 zstyle ':completion:*' completer _complete _prefix _files
 zstyle ':completion:*' menu select=1

@@ -33,6 +33,13 @@ alias v="nvim"
 alias vim="nvim"
 alias tmux="tmux -u"
 
+# Defaults
+if cmd-exists nvim; then
+  export EDITOR="nvim"
+else
+  export EDITOR="vim"
+fi
+
 # FNM
 eval "$(fnm env --use-on-cd)"
 

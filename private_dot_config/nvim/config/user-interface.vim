@@ -3,13 +3,13 @@ set termguicolors
 " Do not show mode since we're using Lightline
 set noshowmode
 
-colorscheme dracula
+colorscheme catppuccin-mocha
 set background=dark
 highlight Normal     ctermbg=NONE guibg=NONE
 highlight LineNr     ctermbg=NONE guibg=NONE
 highlight SignColumn ctermbg=NONE guibg=NONE
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'catppuccin',
       \ }
 
 " Basic UI Settings

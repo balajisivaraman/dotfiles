@@ -49,3 +49,8 @@ eval "$(zoxide init zsh)"
 
 #rye
 source "$HOME/.rye/env"
+
+{{- if eq .chezmoi.os "darwin" }}
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 17.0.10.7.1`
+{{ end -}}

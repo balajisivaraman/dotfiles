@@ -2,11 +2,10 @@
 bindkey -e
 
 # Completions
-{{- if ne .chezmoi.os "darwin" }}
-fpath+="/home/balaji/.nix-profile/share/zsh/site-functions"
-{{ else }}
-fpath+="/Users/balaji/.nix-profile/share/zsh/site-functions"
+{{- if eq .chezmoi.os "darwin" }}
+[[ -d /opt/homebrew/share/zsh/site-functions ]] && fpath+=(/opt/homebrew/share/zsh/site-functions)
 {{ end -}}
+fpath+=(~/.zfunc)
 # Initialize auto completion and expansion.
 zstyle ':completion:*' completer _complete _prefix _files
 zstyle ':completion:*' menu select=1
@@ -23,8 +22,7 @@ export SAVEHIST=100000
 eval "$(starship init zsh)"
 
 # FZF
-source ~/.nix-profile/share/fzf/key-bindings.zsh
-source ~/.nix-profile/share/fzf/completion.zsh
+eval "$(fzf --zsh)"
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \

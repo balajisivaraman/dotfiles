@@ -1,0 +1,24 @@
+# Client Specific Packages
+{{ output "sh" "-c" "cat ~/.Brewfile.client" | trim }}
+
+# System Packages
+brew "bat"
+brew "chezmoi"
+{{- if eq .chezmoi.os "darwin" }}
+brew "docker"
+{{ else }}
+brew "podman"
+{{ end -}}
+brew "git-delta"
+brew "eza"
+brew "fd"
+brew "fnm"
+brew "fzf"
+brew "git"
+{{- if eq .chezmoi.os "darwin" }}
+brew "libfido2"
+brew "openssh"
+{{ end -}}
+brew "neovim"
+brew "ripgrep"
+brew "zoxide"

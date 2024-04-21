@@ -6,19 +6,22 @@ brew "bat"
 brew "chezmoi"
 {{- if eq .chezmoi.os "darwin" }}
 brew "docker"
+brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp"]
 {{ else }}
 brew "podman"
 {{ end -}}
-brew "git-delta"
 brew "eza"
 brew "fd"
 brew "fnm"
 brew "fzf"
 brew "git"
+brew "git-delta"
+brew "hledger"
 {{- if eq .chezmoi.os "darwin" }}
 brew "libfido2"
 brew "openssh"
 {{ end -}}
 brew "neovim"
 brew "ripgrep"
+brew "starship"
 brew "zoxide"

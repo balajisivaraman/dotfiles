@@ -1,0 +1,58 @@
+# Set up Homebrew
+set -gx HOMEBREW_BUNDLE_FILE "~/.Brewfile"
+{{- if eq .chezmoi.os "darwin" }}
+/opt/homebrew/bin/brew shellenv | source
+{{ else }}
+/home/linuxbrew/.linuxbrew/bin/brew shellenv | source
+{{ end }}
+
+# set PATH so it includes user's private bin if it exists
+if test -e "$HOME/.local/bin"
+    fish_add_path -g "$HOME/.local/bin"
+end
+
+# set PATH so it includes user's Cargo bin if it exists
+if test -e "$HOME/.cargo/bin"
+    fish_add_path -g "$HOME/.cargo/bin"
+end
+
+# Set up the prompt
+starship init fish | source
+
+# Set up fzf key bindings
+fzf --fish | source
+set -gx FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# Aliases                                                                                                                                                                                                     1 alias l="eza -lart modified --git-ignore"
+alias l "eza -lart modified --git-ignore"
+alias v "nvim"
+alias vim "nvim"
+alias tmux "tmux -u"
+
+# Completions
+if test -d (brew --prefix)"/share/fish/completions"
+    set -p fish_complete_path (brew --prefix)/share/fish/completions
+end
+
+if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+    set -p fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+end
+
+# Defaults
+if cmd-exists nvim
+  set -gx EDITOR "nvim"
+else
+  set -gx EDITOR "vim"
+end
+
+# FNM
+fnm env --use-on-cd | source
+
+# zoxide
+zoxide init fish | source
+
+#rye
+set -ga fish_user_paths "$HOME/.rye/shims"

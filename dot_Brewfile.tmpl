@@ -6,7 +6,6 @@ brew "bat"
 brew "chezmoi"
 {{- if eq .chezmoi.os "darwin" }}
 brew "docker"
-brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp"]
 {{ else }}
 brew "podman"
 {{ end -}}

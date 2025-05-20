@@ -1,5 +1,7 @@
 # Set up Homebrew
 set -gx HOMEBREW_BUNDLE_FILE "~/.Brewfile"
+set -gx HOMEBREW_NO_ENV_HINTS 1
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
 {{- if eq .chezmoi.os "darwin" }}
 /opt/homebrew/bin/brew shellenv | source
 {{ else }}
@@ -14,6 +16,11 @@ end
 # set PATH so it includes user's Cargo bin if it exists
 if test -e "$HOME/.cargo/bin"
     fish_add_path -g "$HOME/.cargo/bin"
+end
+
+# set PATH so it includes /usr/local/bin if it exists
+if test -e "/usr/local/bin"
+    fish_add_path -g "/usr/local/bin"
 end
 
 # Set up the prompt
@@ -56,3 +63,7 @@ zoxide init fish | source
 
 #rye
 set -ga fish_user_paths "$HOME/.rye/shims"
+
+#jenv
+set PATH $HOME/.jenv/bin $PATH
+status --is-interactive; and jenv init - | source

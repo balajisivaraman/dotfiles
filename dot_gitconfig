@@ -29,10 +29,11 @@
     ls-files-root = ! git ls-files
 [merge]
     tool = kdiff3
+    conflictstyle = zdiff3
+[delta]
+    navigate = true
 [diff]
-    guitool = kdiff3
-[difftool "kdiff3"]
-    path = /usr/bin/kdiff3
+    colorMoved = default
 [core]
     excludesfile = ~/.gitignore_global
     pager = gitdiffer
@@ -48,6 +49,8 @@
     prune = true
 [pull]
     ff = only
+[push]
+    autoSetupRemote = true
 [init]
     defaultBranch = main
 [include]

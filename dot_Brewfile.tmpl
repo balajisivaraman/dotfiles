@@ -2,28 +2,34 @@
 {{ output "sh" "-c" "cat ~/.Brewfile.client" | trim }}
 
 # System Packages
+tap "homebrew/cask"
+brew "awscli"
 brew "bat"
 brew "chezmoi"
-{{- if eq .chezmoi.os "darwin" }}
+brew "colima"
 brew "docker"
-{{ else }}
-brew "podman"
-{{ end -}}
+brew "docker-compose"
+brew "docker-credential-helper"
 brew "eza"
 brew "fd"
-brew "fish"
+brew "ffmpeg"
 brew "fnm"
+cask "font-atkinson-hyperlegible"
+cask "font-alegreya"
+cask "font-alegreya-sc"
+cask "font-inconsolata-nerd-font"
 brew "fzf"
 brew "git"
 brew "git-delta"
-brew "hledger"
-{{- if eq .chezmoi.os "darwin" }}
+brew "golang"
+brew "hugo"
+tap "jandedobbeleer/oh-my-posh"
+cask "oh-my-posh"
+brew "jq"
 brew "libfido2"
 brew "openssh"
-{{ end }}
-brew "jq"
-brew "neovim"
 brew "ripgrep"
-brew "starship"
 brew "tmux"
+brew "typst"
+brew "yt-dlp"
 brew "zoxide"

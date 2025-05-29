@@ -4,3 +4,6 @@ general.import = [
   "~/.config/alacritty/window.toml",
 ]
 
+[terminal]
+shell = { program = "/opt/homebrew/bin/fish" }
+

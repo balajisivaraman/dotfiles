@@ -45,8 +45,6 @@ brew "starship"
 
 # Casks - Applications
 cask "ghostty"
-cask "maccy"
 
 # Casks - Fonts
 cask "font-inconsolata-nerd-font"
-cask "font-literata"

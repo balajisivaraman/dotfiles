@@ -6,7 +6,21 @@
 # Environment Variables
 # ----------------------------------------------------------------------------
 set -gx EDITOR vim
+
+# ----------------------------------------------------------------------------
+# Homebrew Setup
+# ----------------------------------------------------------------------------
 set -gx HOMEBREW_BUNDLE_FILE ~/.Brewfile
+set -gx HOMEBREW_NO_ENV_HINTS 1
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+/opt/homebrew/bin/brew shellenv | source
+if test -d (brew --prefix)"/share/fish/completions"
+    set -p fish_complete_path (brew --prefix)/share/fish/completions
+end
+
+if test -d (brew --prefix)"/share/fish/vendor_completions.d"
+    set -p fish_complete_path (brew --prefix)/share/fish/vendor_completions.d
+end
 
 # ----------------------------------------------------------------------------
 # Path

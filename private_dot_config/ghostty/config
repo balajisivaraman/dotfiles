@@ -1,0 +1,14 @@
+# Font Configuration
+font-family = Inconsolata Nerd Font
+font-size = 16
+
+# Theme
+theme = dracula
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Performance
+shell-integration = detect
+shell-integration-features = no-cursor

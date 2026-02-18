@@ -1,0 +1,52 @@
+# Taps
+
+# Core Development Tools
+brew "git"
+brew "vim"
+brew "tmux"
+brew "chezmoi"
+
+# Version Managers & Language Tools
+brew "mise"
+brew "uv"
+
+# Container Tools
+brew "colima"
+brew "lima-additional-guestagents"
+brew "docker"
+brew "docker-compose"
+brew "docker-credential-helper"
+
+# Cloud & Infrastructure
+brew "awscli"
+
+# Modern CLI Replacements
+brew "bat"          # better cat
+brew "eza"          # better ls
+brew "fd"           # better find
+brew "ripgrep"      # better grep
+brew "fzf"          # fuzzy finder
+brew "zoxide"       # smarter cd
+brew "git-delta"    # better git diff
+
+# Build Tools & Dependencies
+brew "libfido2"
+brew "openssh"
+
+# Utilities
+brew "jq"           # JSON processor
+brew "ffmpeg"       # media processing
+brew "yt-dlp"       # video downloader
+brew "typst"        # document typesetting
+
+# Shell & Prompt
+brew "fish"
+brew "starship"
+
+# Casks - Applications
+cask "ghostty"
+cask "maccy"
+
+# Casks - Fonts
+cask "font-inconsolata-nerd-font"
+cask "font-literata"

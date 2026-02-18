@@ -1,0 +1,21 @@
+# mise configuration - global tool versions
+
+[tools]
+# Node.js - LTS version
+node = "lts"
+
+# Python - latest 3.x
+python = "latest"
+
+# Java - LTS version (21)
+java = "21"
+
+# Go - latest stable
+go = "latest"
+
+[settings]
+# Use system node if no version specified in project
+legacy_version_file = true
+
+# Automatically activate virtualenvs
+python_venv_auto_create = true

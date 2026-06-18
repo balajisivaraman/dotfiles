@@ -1,4 +1,5 @@
 # Taps
+tap "d12frosted/emacs-plus"
 
 # Core Development Tools
 brew "git"
@@ -27,12 +28,16 @@ brew "git-delta"    # better git diff
 # Build Tools & Dependencies
 brew "libfido2"
 brew "openssh"
+brew "cmake"        # needed by Emacs Vterm module
+brew "libtool"      # needed by Emacs Vterm module
+brew "pkgconf"      # needed by Jinx in Emacs
 
 # Utilities
 brew "jq"           # JSON processor
 brew "ffmpeg"       # media processing
 brew "yt-dlp"       # video downloader
 brew "typst"        # document typesetting
+brew "enchant"      # spell checking
 
 # Yubikey
 brew "ykman"
@@ -44,5 +49,8 @@ brew "starship"
 
 # Casks - Applications
 cask "google-drive"
+cask "emacs-plus-app"
 
 # Casks - Fonts
+cask "font-alegreya-sc"
+cask "font-literata"

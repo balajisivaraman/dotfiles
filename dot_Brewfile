@@ -38,7 +38,6 @@ brew "fish"
 brew "starship"
 
 # Casks - Applications
-cask "ghostty"
 
 # Casks - Fonts
 cask "font-inconsolata-nerd-font"

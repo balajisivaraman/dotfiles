@@ -43,6 +43,7 @@ brew "fish"
 brew "starship"
 
 # Casks - Applications
+cask "google-drive"
 
 # Casks - Fonts
 cask "font-inconsolata-nerd-font"

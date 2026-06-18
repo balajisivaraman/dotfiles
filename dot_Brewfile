@@ -10,16 +10,6 @@ brew "chezmoi"
 brew "mise"
 brew "uv"
 
-# Container Tools
-brew "colima"
-brew "lima-additional-guestagents"
-brew "docker"
-brew "docker-compose"
-brew "docker-credential-helper"
-
-# Cloud & Infrastructure
-brew "awscli"
-
 # Modern CLI Replacements
 brew "bat"          # better cat
 brew "eza"          # better ls

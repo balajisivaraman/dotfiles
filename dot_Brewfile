@@ -46,4 +46,3 @@ brew "starship"
 cask "google-drive"
 
 # Casks - Fonts
-cask "font-inconsolata-nerd-font"

@@ -29,6 +29,10 @@ brew "ffmpeg"       # media processing
 brew "yt-dlp"       # video downloader
 brew "typst"        # document typesetting
 
+# Yubikey
+brew "ykman"
+cask "yubico-authenticator"
+
 # Shell & Prompt
 brew "fish"
 brew "starship"

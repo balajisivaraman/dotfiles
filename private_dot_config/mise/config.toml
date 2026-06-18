@@ -17,5 +17,3 @@ go = "latest"
 # Use system node if no version specified in project
 legacy_version_file = true
 
-# Automatically activate virtualenvs
-python_venv_auto_create = true

@@ -13,7 +13,11 @@ set -gx EDITOR vim
 set -gx HOMEBREW_BUNDLE_FILE ~/.Brewfile
 set -gx HOMEBREW_NO_ENV_HINTS 1
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
+{{ if eq .chezmoi.os "darwin" -}}
 /opt/homebrew/bin/brew shellenv | source
+{{ else if eq .chezmoi.os "linux" -}}
+/home/linuxbrew/.linuxbrew/bin/brew shellenv | source
+{{ end -}}
 if test -d (brew --prefix)"/share/fish/completions"
     set -p fish_complete_path (brew --prefix)/share/fish/completions
 end

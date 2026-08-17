@@ -4,11 +4,11 @@ import = [
 ]
 
 [font]
-normal = { family = "Monaco Nerd Font", style = "Regular" }
-bold = { family = "Monaco Nerd Font", style = "Bold" }
-italic = { family = "Monaco Nerd Font", style = "Italic" }
-bold_italic = { family = "Monaco Nerd Font", style = "Bold Italic" }
-size = 12
+normal = { family = "NotoSansM Nerd Font", style = "Regular" }
+bold = { family = "NotoSansM Nerd Font", style = "Bold" }
+italic = { family = "NotoSansM Nerd Font", style = "Italic" }
+bold_italic = { family = "NotoSansM Nerd Font", style = "Bold Italic" }
+size = 14
 
 [window]
 option_as_alt = "Both"

@@ -54,3 +54,4 @@ cask "emacs-plus-app"
 # Casks - Fonts
 cask "font-alegreya-sc"
 cask "font-literata"
+cask "font-noto-nerd-font"

@@ -6,6 +6,7 @@ brew "git"
 brew "vim"
 brew "tmux"
 brew "chezmoi"
+cask "claude-code"
 
 # Version Managers & Language Tools
 brew "mise"
@@ -38,6 +39,7 @@ brew "ffmpeg"       # media processing
 brew "yt-dlp"       # video downloader
 brew "typst"        # document typesetting
 brew "enchant"      # spell checking
+brew "hugo"         # static blog generator
 
 # Yubikey
 brew "ykman"

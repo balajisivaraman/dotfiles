@@ -1,6 +1,6 @@
 [general]
 import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
+  "~/.config/alacritty/colors.toml"
 ]
 
 [font]

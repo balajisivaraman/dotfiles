@@ -1,5 +1,5 @@
-# Set the theme to "Catppuccin Mocha"
---theme="Catppuccin Mocha"
+# Use base16-256 to inherit terminal ANSI colors set by tinted-shell
+--theme="base16-256"
 
 # Show line numbers, Git modifications and file header (but no grid)
 --style="numbers,changes,header"

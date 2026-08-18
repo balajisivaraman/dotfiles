@@ -1,0 +1,42 @@
+default-scheme = "base16-gruvbox-material-dark-hard"
+
+[[items]]
+name = "tinted-shell"
+path = "https://github.com/tinted-theming/tinted-shell"
+themes-dir = "scripts"
+hook = ". %f"
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "tinted-terminal"
+path = "https://github.com/tinted-theming/tinted-terminal"
+themes-dir = "themes/alacritty"
+hook = "cp -f %f ~/.config/alacritty/colors.toml && touch ~/.config/alacritty/alacritty.toml"
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "tinted-fzf"
+path = "https://github.com/tinted-theming/tinted-fzf"
+themes-dir = "fish"
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "tinted-delta"
+path = "https://github.com/tinted-theming/tinted-delta"
+themes-dir = "configs"
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "tinted-tmux"
+path = "https://github.com/tinted-theming/tinted-tmux"
+themes-dir = "colors"
+hook = "cp -f %f ~/.config/tmux/colors.conf && tmux run 2>/dev/null && tmux source-file ~/.config/tmux/colors.conf"
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "tinted-claude-code"
+path = "https://github.com/tinted-theming/tinted-claude-code"
+themes-dir = "scripts"
+theme-file-extension = ".js"
+supported-systems = ["base16", "base24", "tinted8"]
+hook = "mkdir -p \"$HOME/.claude/themes\" && node \"$TINTY_THEME_FILE_PATH\" > \"$HOME/.claude/themes/tinty.json\""

@@ -1,4 +1,5 @@
 # Taps
+tap "tinted-theming/tinted"
 
 # Core Development Tools
 brew "gcc"
@@ -26,6 +27,7 @@ brew "ripgrep"      # better grep
 brew "fzf"          # fuzzy finder
 brew "zoxide"       # smarter cd
 brew "git-delta"    # better git diff
+brew "tinted-theming/tinted/tinty" # tinted-theming theme manager
 
 # Utilities
 brew "jq"           # JSON processor

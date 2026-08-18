@@ -8,6 +8,7 @@ brew "vim"
 brew "tmux"
 brew "chezmoi"
 brew "cmake"
+cask "claude-code"
 
 # Version Managers & Language Tools
 brew "mise"

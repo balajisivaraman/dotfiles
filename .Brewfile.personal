@@ -1,6 +1,5 @@
 # Taps
 tap "d12frosted/emacs-plus"
-tap "tinted-theming/tinted"
 
 # Core Development Tools
 brew "git"
@@ -26,7 +25,6 @@ brew "ripgrep"      # better grep
 brew "fzf"          # fuzzy finder
 brew "zoxide"       # smarter cd
 brew "git-delta"    # better git diff
-brew "tinted-theming/tinted/tinty" # tinted-theming theme manager
 
 # Build Tools & Dependencies
 brew "libfido2"
@@ -58,4 +56,3 @@ cask "emacs-plus-app"
 # Casks - Fonts
 cask "font-alegreya-sc"
 cask "font-literata"
-cask "font-noto-nerd-font"

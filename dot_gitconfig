@@ -32,8 +32,36 @@
 [merge]
     conflictstyle = zdiff3
 
-[include]
-    path = ~/.local/share/tinted-theming/tinty/tinted-delta-configs-file.gitconfig
+[delta "catppuccin-mocha"]
+	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
+	commit-decoration-style = "#6c7086" bold box ul
+	dark = true
+	file-decoration-style = "#6c7086"
+	file-style = "#cdd6f4"
+	hunk-header-decoration-style = "#6c7086" box ul
+	hunk-header-file-style = bold
+	hunk-header-line-number-style = bold "#a6adc8"
+	hunk-header-style = file line-number syntax
+	line-numbers-left-style = "#6c7086"
+	line-numbers-minus-style = bold "#f38ba8"
+	line-numbers-plus-style = bold "#a6e3a1"
+	line-numbers-right-style = "#6c7086"
+	line-numbers-zero-style = "#6c7086"
+	# 35% red 65% base
+	minus-emph-style = bold syntax "#694559"
+	# 20% red 80% base
+	minus-style = syntax "#493447"
+	# 35% green 65% base
+	plus-emph-style = bold syntax "#4e6356"
+	# 20% green 80% base
+	plus-style = syntax "#394545"
+	map-styles = \
+		bold purple => syntax "#5b4e74", \
+		bold blue => syntax "#445375", \
+		bold cyan => syntax "#446170", \
+		bold yellow => syntax "#6b635b"
+	# Should match the name of the bat theme
+	syntax-theme = Catppuccin Mocha
 
 [delta]
     navigate = true
@@ -41,23 +69,7 @@
     line-numbers = true
     hyperlinks = true
     tabs = 4
-    file-style = "#ddc7a1"
-    file-decoration-style = "#665c54"
-    commit-decoration-style = "#665c54" bold box ul
-    hunk-header-style = file line-number syntax
-    hunk-header-file-style = bold
-    hunk-header-decoration-style = "#665c54" box ul
-    hunk-header-line-number-style = bold "#bdae93"
-    line-numbers-left-style = "#665c54"
-    line-numbers-right-style = "#665c54"
-    line-numbers-zero-style = "#665c54"
-    line-numbers-minus-style = bold "#ea6962"
-    line-numbers-plus-style = bold "#a9b665"
-    minus-style = syntax "#3c2828"
-    minus-emph-style = bold syntax "#562b29"
-    plus-style = syntax "#2d3828"
-    plus-emph-style = bold syntax "#3a4a2b"
-    blame-palette = "#1d2021 #282828 #32302f #3c3836 #504945"
+    features = catppuccin-mocha
 
 [diff]
     colorMoved = default
